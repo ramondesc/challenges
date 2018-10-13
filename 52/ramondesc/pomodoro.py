@@ -1,5 +1,4 @@
-import datetime
-import time
+from time import sleep
 
 
 focusMinutes = 25
@@ -25,7 +24,7 @@ def countdown(timeInSeconds):
         mins, secs = divmod(timeInSeconds, 60)
         timeformat = '{:02d}:{:02d}'.format(mins, secs)
         print(timeformat, end='\r')
-        time.sleep(1)
+        sleep(1)
         timeInSeconds -= 1
 
 def beginCounter(focus, breakTime):
